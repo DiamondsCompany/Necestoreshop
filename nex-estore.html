@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>亗 Nex Estore Shop</title>
+<style>
+:root{--bg:#f3f1fb;--card:#fff;--tx:#1a1530;--mu:#6b6785;--ac:#7c3aed;--ac2:#06b6d4;--bd:#e3dff5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0c0a1a;--card:#16132b;--tx:#f1eeff;--mu:#9a96b8;--bd:#2a2547}}
+:root[data-theme=dark]{--bg:#0c0a1a;--card:#16132b;--tx:#f1eeff;--mu:#9a96b8;--bd:#2a2547}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:70px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--card)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;padding:8px 12px;gap:8px}
+.logo{font-weight:800;font-size:17px;background:linear-gradient(90deg,var(--ac),var(--ac2),#f0abfc,var(--ac));background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 4s linear infinite;text-shadow:0 0 18px #7c3aed55}
+@keyframes sh{to{background-position:300%}}
+.ib{display:flex;gap:6px}.ib button{width:34px;height:34px;border-radius:50%;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:15px;cursor:pointer}
+main{max-width:560px;margin:0 auto;padding:12px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:12px}
+.hero{background:linear-gradient(135deg,#7c3aed,#06b6d4);color:#fff;border:0;text-align:center}
+.hero h2{margin:0 0 4px}.msg{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:8px}.msg span{background:#ffffff30;border-radius:20px;padding:5px 10px;font-size:13px}
+button.b{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0;border-radius:12px;padding:11px 14px;font-weight:700;cursor:pointer;width:100%;font-size:15px}
+button.s{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:7px 10px;cursor:pointer}
+input,textarea,select{width:100%;padding:11px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;margin:5px 0}
+.offer{display:flex;justify-content:space-between;align-items:center;padding:12px;border:1px solid var(--bd);border-radius:12px;margin:6px 0;cursor:pointer;background:var(--bg)}
+.offer:hover,.offer.on{border-color:var(--ac);box-shadow:0 0 0 2px #7c3aed44}
+.ff{display:flex;align-items:center;gap:10px;cursor:pointer}.ff i{font-size:30px;font-style:normal}
+.pm{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mu{color:var(--mu);font-size:13px}
+.live{display:flex;gap:8px}.live>div{flex:1;text-align:center}.live b{font-size:22px;display:block}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pl 1s infinite}
+@keyframes pl{50%{opacity:.2}}
+.st{color:#f5b301;letter-spacing:2px}.star{font-size:26px;cursor:pointer;color:#f5b301}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--bd);display:flex;padding-bottom:env(safe-area-inset-bottom,0px);z-index:9}
+nav button{flex:1;background:none;border:0;color:var(--mu);padding:9px 0;font-size:11px;cursor:pointer}nav button.on{color:var(--ac);font-weight:700}nav span{display:block;font-size:19px}
+.tag{padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700}.pend{background:#f5b30133;color:#d99a00}.ok{background:#22c55e33;color:#16a34a}.no{background:#ef444433;color:#dc2626}
+#ov{position:fixed;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 30%,#2b1b5e,#0a0820);color:#fff}
+#ov.show{display:flex}#ov.ok{background:radial-gradient(circle,#0f5132,#04160d)}#ov.no{background:radial-gradient(circle,#6b1620,#1a0407)}
+.ring{width:130px;height:130px;border-radius:50%;border:6px solid #ffffff22;border-top-color:#06b6d4;border-right-color:#7c3aed;animation:sp 1s linear infinite;box-shadow:0 0 40px #7c3aed;margin:20px}
+.big{width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;margin:20px;animation:pop .6s,glow 1.5s infinite alternate}
+.ok .big{background:#22c55e;box-shadow:0 0 60px #22c55e}.no .big{background:#ef4444;box-shadow:0 0 60px #ef4444}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes pop{from{transform:scale(0)}}@keyframes glow{to{filter:brightness(1.3)}}
+.sum{background:#ffffff15;border-radius:14px;padding:12px 18px;text-align:left;min-width:250px;line-height:1.7}
+.modal{position:fixed;inset:0;background:#000a;z-index:40;display:flex;align-items:flex-end;justify-content:center}.modal>div{background:var(--card);width:100%;max-width:560px;border-radius:20px 20px 0 0;padding:16px;max-height:85vh;overflow:auto}
+.bot{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto;animation:fl 2s ease-in-out infinite;box-shadow:0 0 24px #06b6d4}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.m{padding:8px 12px;border-radius:14px;margin:5px 0;max-width:85%}.m.u{background:var(--ac);color:#fff;margin-left:auto}.m.r{background:var(--bg)}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd)}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:10px}.tabs button{white-space:nowrap}
+.tabs .on{background:var(--ac);color:#fff}
+.ava{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;margin:0 auto 8px}
+</style></head><body>
+<div id="app"></div><div id="ov"></div><div id="md"></div>
+<script>
+var ADMIN="arderiflow9@gmail.com";
+var DEF={users:[],orders:[],refs:[],
+cfg:{rate:305,phone:"+53 00000000",card:"0000 0000 0000 0000",bphone:"+53 00000000",usdt:"TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",group:"https://chat.whatsapp.com/",channel:"https://whatsapp.com/channel/",wa1:"+34602473290",wa2:"+34602473290",notice:"Bienvenido a Nex Estore Shop. ¡Recargas rápidas y seguras!"},
+games:[{n:"Free Fire",e:"🔥",o:[[110,265],[341,795],[572,1325],[1166,2650],[2398,5300],[6160,13250]]}]};
+var S;try{S=JSON.parse(localStorage.getItem("nex"))}catch(e){}
+if(!S)S=JSON.parse(JSON.stringify(DEF));
+function sv(){try{localStorage.setItem("nex",JSON.stringify(S))}catch(e){}}
+var sess=null;try{sess=localStorage.getItem("nexs")}catch(e){}
+var tab="home",F={},watch=null,at="cl",auth="in",th=null;
+function me(){return S.users.find(function(u){return u.id==sess})}
+function isA(){var u=me();return u&&u.email==ADMIN}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function $(i){return document.getElementById(i)}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function cr(p){return Math.round(p/S.cfg.rate*100)/100}
+var NES='<svg width="46" height="46" viewBox="0 0 48 48"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="url(#g)" stroke="#fff" stroke-width="2"/><path d="M15 34V14l18 20V14" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/></svg>';
+function toast(t){alert(t)}
+function cp(t){try{navigator.clipboard.writeText(t)}catch(e){}toast("Copiado ✅")}
+function theme(){th=th=="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",th)}
+function go(t){tab=t;F={};render()}
+function modal(h){$("md").innerHTML=h?'<div class="modal" onclick="if(event.target==this)modal()"><div>'+h+'</div></div>':""}
+
+/* AUTH */
+function authV(){return '<main><div class="c hero"><h2 class="logo" style="color:#fff;-webkit-text-fill-color:#fff">亗 Nex Estore Shop</h2><div>Recargas de diamantes</div></div><div class="c"><div class="tabs"><button class="s '+(auth=="in"?"on":"")+'" onclick="auth=\'in\';render()">Iniciar sesión</button><button class="s '+(auth=="up"?"on":"")+'" onclick="auth=\'up\';render()">Crear cuenta</button></div>'+
+(auth=="up"?'<input id="an" placeholder="Nombre"><input id="ap" type="tel" placeholder="Número (opcional)">':'')+
+'<input id="ae" type="email" placeholder="Correo"><input id="aw" type="password" placeholder="Contraseña"><button class="b" onclick="doAuth()">'+(auth=="in"?"Entrar":"Crear cuenta")+'</button></div></main>'}
+function doAuth(){var e=$("ae").value.trim().toLowerCase(),w=$("aw").value;if(!e||!w)return toast("Completa correo y contraseña");
+if(auth=="up"){var n=$("an").value.trim();if(!n)return toast("Pon tu nombre");if(S.users.some(function(u){return u.email==e}))return toast("Ese correo ya existe");
+var u={id:uid(),name:n,phone:$("ap").value.trim(),email:e,pw:w,bal:0,ban:false,adm:e==ADMIN,t:Date.now()};S.users.push(u);sv();sess=u.id}
+else{var u=S.users.find(function(x){return x.email==e&&x.pw==w});if(!u)return toast("Datos incorrectos");if(u.ban)return toast("Cuenta baneada");sess=u.id}
+try{localStorage.setItem("nexs",sess)}catch(x){}render()}
+function logout(){sess=null;try{localStorage.removeItem("nexs")}catch(e){}render()}
+
+/* SHELL */
+function render(){var u=me();if(!u||u.ban){$("app").innerHTML=authV();return}
+var nav=[["home","🏪","Tienda"],["orders","📦","Pedidos"],["wallet","💰","Wallet"],["profile","👤","Perfil"]];if(isA())nav.push(["admin","🛡️","Admin"]);
+$("app").innerHTML='<header><div class="logo">亗 Nex Estore Shop</div><div class="ib"><button onclick="theme()" title="Tema">🌓</button><button onclick="go(\'home\')" title="Tienda">🏪</button><button onclick="notice()" title="Avisos">🔔</button><button onclick="go(\'wallet\')" title="Créditos">💎</button></div></header><main>'+
+({home:homeV,orders:ordersV,wallet:walletV,profile:profV,admin:adminV}[tab])()+'</main><nav>'+nav.map(function(n){return'<button class="'+(tab==n[0]?"on":"")+'" onclick="go(\''+n[0]+'\')"><span>'+n[1]+'</span>'+n[2]+'</button>'}).join("")+'</nav>'}
+function notice(){modal('<h3>🔔 Avisos</h3><p>'+esc(S.cfg.notice)+'</p><button class="b" onclick="modal()">Cerrar</button>')}
+
+/* HOME */
+function homeV(){var done=S.orders.filter(function(o){return o.status=="ok"&&o.kind=="ord"}),last=done[done.length-1];
+var h='<div class="c hero"><h2>🎉 ¡Bienvenido a Nex Estore Shop!</h2><div>Tu tienda de recargas de videojuegos</div><div class="msg"><span>⚡ Recargas en menos de 15 minutos</span><span>🔒 Rápidas y seguras</span><span>💸 Los mejores precios</span></div></div>';
+h+='<div class="c"><div class="mu"><span class="dot"></span> EN VIVO</div><div class="live"><div><b>'+done.length+'</b><span class="mu">Recargas entregadas</span></div><div><b style="font-size:14px">'+(last?'💎 '+last.d+' · '+esc(last.game)+'<br>'+esc(last.name):'—')+'</b><span class="mu">Última entregada</span></div></div></div>';
+S.games.forEach(function(g,i){h+='<div class="c"><div class="ff" onclick="F.g=F.g===\''+i+'\'?null:\''+i+'\';F.o=null;F.m=null;render()"><i>'+g.e+'</i><div><b>'+esc(g.n)+'</b><div class="mu">Toca para ver ofertas</div></div></div>';
+if(F.g===String(i)){g.o.forEach(function(o,j){h+='<div class="offer'+(F.o===j?" on":"")+'" onclick="F.o='+j+';F.m=null;render()"><b>💎 '+o[0]+' 💎</b><span>'+o[1]+' Saldo Móvil 📱</span></div>'});
+if(F.o!=null&&F.o!==undefined){h+='<input id="pid" placeholder="ID del jugador" inputmode="numeric" value="'+esc(F.id||"")+'"><button class="b" onclick="sendId()">Enviar</button>'}
+if(F.ok&&F.o!=null)h+=payV()}
+h+='</div>'});
+h+=refsV()+'<button class="b" onclick="help()">❓ ¿Necesitas ayuda?</button>';return h}
+function sendId(){var v=$("pid").value.trim();if(!v)return toast("Pon el ID del jugador");F.id=v;F.ok=1;var g=S.games[F.g],o=g.o[F.o];F.ctx={kind:"ord",game:g.n,d:o[0],p:o[1],cr:cr(o[1]),id:v};render()}
+function payV(){var c=F.ctx,h='<h4>Método de pago</h4><div class="mu">'+c.d+' 💎 · ID '+esc(c.id)+'</div><div class="pm"><button class="s" onclick="F.m=\'sal\';render()">📱 Saldo Móvil</button><button class="s" onclick="F.m=\'ban\';render()">🏦 Transferencia</button><button class="s" onclick="F.m=\'usd\';render()">💵 USDT</button>'+(c.kind=="ord"?'<button class="s" onclick="F.m=\'cre\';render()">💎 Créditos</button>':'')+'</div>';
+return h+payForm(c)}
+function cpRow(l,v){return'<div class="row"><div><div class="mu">'+l+'</div><b>'+esc(v)+'</b></div><button class="s" onclick="cp(\''+esc(v).replace(/'/g,"")+'\')">Copiar</button></div>'}
+function payForm(c){var m=F.m,C=S.cfg,h="";if(!m)return"";
+if(m=="sal")h=cpRow("Teléfono a enviar",C.phone)+'<p>Monto exacto: <b>'+c.p+' Saldo Móvil</b></p><input id="f1" placeholder="Número desde el que envías"><label class="mu">Captura de la transferencia</label><input id="f2" type="file" accept="image/*">';
+if(m=="ban")h=cpRow("Tarjeta a transferir",C.card)+cpRow("Móvil a confirmar",C.bphone)+'<p>Monto exacto: <b>'+c.p+'</b></p><input id="f1" placeholder="Tu número"><label class="mu">Captura de la transferencia</label><input id="f2" type="file" accept="image/*">';
+if(m=="usd")h=cpRow("Dirección USDT",C.usdt)+'<p>Monto: <b>'+c.cr+' USDT</b></p><input id="f1" placeholder="HASH de la transferencia">';
+if(m=="cre"){var u=me();h='<p>Tu saldo: <b>'+u.bal+' NES</b><br>Precio: <b>'+c.cr+' NES</b></p>'+(u.bal<c.cr?'<p style="color:#ef4444">Créditos insuficientes</p>':"")}
+return'<div class="c" style="margin-top:8px">'+h+'<button class="b" onclick="submitPay()">Enviar a revisión</button></div>'}
+function submitPay(){var c=F.ctx,m=F.m,u=me();if(!m)return toast("Elige un método");var e="";
+if(m!="cre"){e=($("f1")||{}).value||"";if(!e.trim())return toast("Completa los datos del pago");if($("f2")&&$("f2").files[0])e+=" · "+$("f2").files[0].name;else if($("f2"))return toast("Adjunta la captura")}
+else{if(u.bal<c.cr)return toast("Créditos insuficientes");u.bal=Math.round((u.bal-c.cr)*100)/100}
+var o={id:uid(),uid:u.id,name:u.name,email:u.email,kind:c.kind,game:c.game||"Créditos",d:c.d,p:c.p,cr:c.cr,pid:c.id,method:{sal:"Saldo Móvil",ban:"Transferencia",usd:"USDT",cre:"Créditos"}[m],ev:e,status:"pend",t:Date.now()};
+S.orders.push(o);sv();F={};watch=o.id;showOv();render()}
+
+/* OVERLAY */
+function showOv(){var o=S.orders.find(function(x){return x.id==watch}),v=$("ov");if(!o){v.className="";return}
+var s=o.status,T=o.kind=="dep"?"Depósito de "+o.cr+" NES":"💎 "+o.d+" · "+esc(o.game);
+v.className="show "+s;
+v.innerHTML=(s=="pend"?'<div class="ring"></div><h2>Procesando tu pedido…</h2><p>Estamos revisando tu pago ✨</p>':s=="ok"?'<div class="big">✓</div><h2>¡Aceptado! 🎉</h2><p>'+(o.kind=="dep"?"Tus créditos fueron añadidos":"Tu recarga fue entregada")+'</p>':'<div class="big">✕</div><h2>Rechazado</h2><p>No pudimos verificar tu pago. Contacta a soporte.</p>')+
+'<div class="sum"><div>'+T+'</div><div>Precio: '+(o.method=="USDT"||o.method=="Créditos"?o.cr+(o.method=="USDT"?" USDT":" NES"):o.p+" Saldo")+'</div><div>Método: '+o.method+'</div>'+(o.pid?'<div>ID: '+esc(o.pid)+'</div>':'')+'</div><br><button class="s" onclick="watch=null;showOv();render()">'+(s=="pend"?"Minimizar":"Cerrar")+'</button>'}
+setInterval(function(){try{var n=JSON.parse(localStorage.getItem("nex"));if(n){var ch=JSON.stringify(n.orders)!=JSON.stringify(S.orders);S=n;if(ch&&sess){showOv();if(!watch||true)render()}}}catch(e){}},2500);
+
+/* REFS + HELP */
+function refsV(){var h='<div class="c"><b>⭐ Referencias</b>';S.refs.slice(-8).reverse().forEach(function(r){h+='<div class="row"><div><b>'+esc(r.n)+'</b> <span class="st">'+"★".repeat(r.s)+"☆".repeat(5-r.s)+'</span><div class="mu">'+esc(r.t)+'</div></div></div>'});
+h+='<div style="margin-top:8px"><span id="stars">'+[1,2,3,4,5].map(function(i){return'<span class="star" onclick="F.s='+i+';stars()">'+(i<=(F.s||0)?"★":"☆")+'</span>'}).join("")+'</span><textarea id="rt" rows="2" placeholder="Escribe tu referencia"></textarea><button class="b" onclick="addRef()">Publicar referencia</button></div></div>';return h}
+function stars(){var t=$("rt").value;render();$("rt").value=t}
+function addRef(){var t=$("rt").value.trim();if(!F.s||!t)return toast("Elige estrellas y escribe algo");S.refs.push({n:me().name,s:F.s,t:t});sv();F.s=0;render()}
+function help(){var C=S.cfg;modal('<div class="bot">🤖</div><h3 style="text-align:center">Hablar con Roxi</h3><div class="mu" style="text-align:center">Asistente IA de Nex Estore</div><div id="ch" style="min-height:90px"><div class="m r">¡Hola! Soy Roxi 🤖 ¿En qué te ayudo?</div></div><div style="display:flex;gap:6px"><input id="q" placeholder="Escribe tu pregunta"><button class="b" style="width:auto" onclick="ask()">➤</button></div><h4>Contacta con nuestro soporte</h4><div class="pm"><a href="https://wa.me/'+C.wa1.replace(/\D/g,"")+'" target="_blank"><button class="b">💬 WhatsApp 1</button></a><a href="https://wa.me/'+C.wa2.replace(/\D/g,"")+'" target="_blank"><button class="b">💬 WhatsApp 2</button></a></div><h4>Sé parte de nuestra comunidad</h4><div class="pm"><a href="'+esc(C.group)+'" target="_blank"><button class="b">👥 Grupo</button></a><a href="'+esc(C.channel)+'" target="_blank"><button class="b">📢 Canal</button></a></div>')}
+function ask(){var q=$("q").value.trim();if(!q)return;var l=q.toLowerCase(),r="Para eso te recomiendo contactar a nuestro soporte por WhatsApp 💬";
+if(/tiempo|demora|cuanto|rápid|rapid/.test(l))r="Las recargas llegan en menos de 15 minutos ⚡";
+else if(/pago|pagar|método|metodo/.test(l))r="Aceptamos Saldo Móvil, Transferencia, USDT y Créditos NES 💳";
+else if(/id/.test(l))r="Tu ID está en tu perfil de Free Fire, toca tu avatar para verlo 🔥";
+else if(/credito|crédito|nes/.test(l))r="Cada crédito NES vale "+S.cfg.rate+" de saldo. Deposita en Wallet 💎";
+else if(/hola|buenas/.test(l))r="¡Hola! 👋 ¿Qué recarga necesitas hoy?";
+$("ch").innerHTML+='<div class="m u">'+esc(q)+'</div><div class="m r">'+r+'</div>';$("q").value=""}
+
+/* ORDERS */
+function tg(s){return'<span class="tag '+s+'">'+({pend:"Pendiente",ok:"Aceptado",no:"Rechazado"}[s])+'</span>'}
+function ordRow(o){return'<div class="row" onclick="watch=\''+o.id+'\';showOv()" style="cursor:pointer"><div><b>'+(o.kind=="dep"?"Depósito "+o.cr+" NES":"💎 "+o.d+" · "+esc(o.game))+'</b><div class="mu">'+o.method+' · '+new Date(o.t).toLocaleString()+'</div></div>'+tg(o.status)+'</div>'}
+function ordersV(){var l=S.orders.filter(function(o){return o.uid==sess&&o.kind=="ord"}).reverse();return'<div class="c"><b>📦 Mis pedidos</b>'+(l.map(ordRow).join("")||'<p class="mu">Aún no tienes pedidos.</p>')+'</div>'}
+
+/* WALLET */
+function walletV(){var u=me(),n=F.n||1,dep=S.orders.filter(function(o){return o.uid==sess&&o.kind=="dep"}).reverse().slice(0,8);
+var h='<div class="c hero" style="text-align:center">'+NES+'<div>Tu saldo</div><h1 style="margin:0">'+u.bal+' NES</h1><div class="mu" style="color:#fff">1 NES = '+S.cfg.rate+' Saldo</div></div>';
+h+='<div class="c"><b>➕ Añadir créditos</b><input id="dn" type="number" min="1" value="'+n+'" placeholder="Cantidad (mínimo 1)"><button class="b" onclick="startDep()">Depositar</button>';
+if(F.ctx&&F.ctx.kind=="dep")h+='<p>A pagar: <b>'+F.ctx.p+' Saldo</b> ('+F.ctx.cr+' USDT)</p><div class="pm"><button class="s" onclick="F.m=\'sal\';render()">📱 Saldo Móvil</button><button class="s" onclick="F.m=\'ban\';render()">🏦 Transferencia</button><button class="s" onclick="F.m=\'usd\';render()">💵 USDT</button></div>'+payForm(F.ctx);
+h+='</div><div class="c"><b>📤 Enviar créditos</b><input id="te" type="email" placeholder="Correo del destinatario"><input id="ta" type="number" min="1" placeholder="Cantidad"><button class="b" onclick="sendCr()">Enviar</button></div>';
+return h+'<div class="c"><b>🕘 Últimos depósitos</b>'+(dep.map(ordRow).join("")||'<p class="mu">Sin depósitos.</p>')+'</div>'}
+function startDep(){var n=parseFloat($("dn").value);if(!(n>=1))return toast("Mínimo 1 crédito");F={n:n,ctx:{kind:"dep",d:0,p:Math.round(n*S.cfg.rate),cr:n,id:""}};render()}
+function sendCr(){var e=$("te").value.trim().toLowerCase(),a=parseFloat($("ta").value),u=me(),t=S.users.find(function(x){return x.email==e});
+if(!t||t.id==u.id)return toast("Destinatario no válido");if(!(a>0)||a>u.bal)return toast("Cantidad inválida o saldo insuficiente");u.bal-=a;t.bal+=a;sv();toast("Enviaste "+a+" NES a "+t.name+" ✅");render()}
+
+/* PROFILE */
+function profV(){var u=me(),n=S.orders.filter(function(o){return o.uid==sess&&o.kind=="ord"});
+return'<div class="c" style="text-align:center"><div class="ava">'+esc(u.name[0]||"?").toUpperCase()+'</div><h3 style="margin:0">'+esc(u.name)+'</h3><div class="mu">'+esc(u.email)+'</div>'+(isA()?'<div class="tag ok" style="display:inline-block;margin-top:6px">ADMIN</div>':"")+'</div><div class="c"><div class="row"><span>📞 Teléfono</span><b>'+esc(u.phone||"—")+'</b></div><div class="row"><span>💎 Créditos</span><b>'+u.bal+' NES</b></div><div class="row"><span>📦 Pedidos</span><b>'+n.length+'</b></div><div class="row"><span>✅ Entregados</span><b>'+n.filter(function(o){return o.status=="ok"}).length+'</b></div><div class="row"><span>📅 Miembro desde</span><b>'+new Date(u.t).toLocaleDateString()+'</b></div></div><button class="b" onclick="logout()">Cerrar sesión</button>'}
+
+/* ADMIN */
+function adminV(){if(!isA())return"";var T=[["cl","Clientes"],["of","Ofertas"],["pe","Pedidos"],["aj","Ajustes"]],h='<div class="tabs">'+T.map(function(t){return'<button class="s '+(at==t[0]?"on":"")+'" onclick="at=\''+t[0]+'\';render()">'+t[1]+'</button>'}).join("")+'</div>',C=S.cfg;
+if(at=="cl")h+='<div class="c">'+S.users.map(function(u){return'<div class="row"><div><b>'+esc(u.name)+'</b> '+(u.ban?tg("no"):"")+(u.adm?tg("ok"):"")+'<div class="mu">'+esc(u.email)+' · '+u.bal+' NES</div></div>'+(u.email==ADMIN?"":'<div><button class="s" onclick="tu(\''+u.id+'\',\'ban\')">'+(u.ban?"Desbanear":"Banear")+'</button> <button class="s" onclick="tu(\''+u.id+'\',\'adm\')">'+(u.adm?"Quitar admin":"Admin")+'</button></div>')+'</div>'}).join("")+'</div>';
+if(at=="of")h+=S.games.map(function(g,i){return'<div class="c"><div class="row"><b>'+g.e+' <input style="width:60%" value="'+esc(g.n)+'" onchange="S.games['+i+'].n=this.value;sv()"></b><button class="s" onclick="if(confirm(\'¿Borrar juego?\')){S.games.splice('+i+',1);sv();render()}">🗑️</button></div>'+g.o.map(function(o,j){return'<div style="display:flex;gap:4px"><input type="number" value="'+o[0]+'" onchange="S.games['+i+'].o['+j+'][0]=+this.value;sv()"><input type="number" value="'+o[1]+'" onchange="S.games['+i+'].o['+j+'][1]=+this.value;sv()"><button class="s" onclick="S.games['+i+'].o.splice('+j+',1);sv();render()">✕</button></div>'}).join("")+'<button class="s" onclick="S.games['+i+'].o.push([0,0]);sv();render()">+ Oferta (💎 / precio)</button></div>'}).join("")+'<button class="b" onclick="var n=prompt(\'Nombre del juego\');if(n){S.games.push({n:n,e:\'🎮\',o:[]});sv();render()}">+ Añadir juego</button>';
+if(at=="pe")h+='<div class="c">'+(S.orders.slice().reverse().map(function(o){return'<div class="row"><div><b>'+(o.kind=="dep"?"Depósito "+o.cr+" NES":"💎 "+o.d+" "+esc(o.game))+'</b> '+tg(o.status)+'<div class="mu">'+esc(o.name)+' · '+o.method+(o.pid?' · ID '+esc(o.pid):"")+'<br>'+esc(o.ev)+'</div></div>'+(o.status=="pend"?'<div><button class="s" onclick="dec(\''+o.id+'\',\'ok\')">✅</button> <button class="s" onclick="dec(\''+o.id+'\',\'no\')">❌</button></div>':"")+'</div>'}).join("")||'<p class="mu">Sin pedidos.</p>')+'</div>';
+if(at=="aj"){var f=function(k,l){return'<label class="mu">'+l+'</label><input value="'+esc(C[k])+'" onchange="S.cfg.'+k+'=this.value;sv()">'};
+h+='<div class="c">'+f("group","Link del grupo")+f("channel","Link del canal")+f("wa1","Soporte WhatsApp 1")+f("wa2","Soporte WhatsApp 2")+f("phone","Teléfono Saldo Móvil")+f("card","Tarjeta")+f("bphone","Móvil a confirmar")+f("usdt","Dirección USDT")+f("notice","Aviso")+'<label class="mu">Valor de 1 crédito (saldo)</label><input type="number" value="'+C.rate+'" onchange="S.cfg.rate=+this.value;sv()"></div>'}
+return h}
+function tu(id,k){var u=S.users.find(function(x){return x.id==id});if(k=="ban")u.ban=!u.ban;else u.adm=!u.adm;sv();render()}
+function dec(id,s){var o=S.orders.find(function(x){return x.id==id});o.status=s;if(s=="ok"&&o.kind=="dep"){var u=S.users.find(function(x){return x.id==o.uid});if(u)u.bal=Math.round((u.bal+o.cr)*100)/100}
+if(s=="no"&&o.method=="Créditos"){var v=S.users.find(function(x){return x.id==o.uid});if(v)v.bal+=o.cr}sv();render()}
+render();
+</script></body></html>
