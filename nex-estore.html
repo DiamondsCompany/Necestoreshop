@@ -55,7 +55,8 @@ nav button{flex:1;background:none;border:0;color:var(--mu);padding:7px 0;font-si
 .tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:10px}.tabs button{white-space:nowrap}.tabs .on{background:var(--ac);color:#fff}
 </style></head><body><div id="app"></div><div id="ov"></div><div id="md"></div>
 <script>
-var ADMIN="arderiflow9@gmail.com";
+var ADMINS=["arderiflow9@gmail.com","juliocesar.777@gmail.com"];
+function isAdm(e){return ADMINS.indexOf(e)>=0}
 var DEF={users:[],orders:[],refs:[],cfg:{rate:305,phone:"+53 00000000",card:"0000 0000 0000 0000",bphone:"+53 00000000",usdt:"TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",group:"https://chat.whatsapp.com/",channel:"https://whatsapp.com/channel/",wa1:"+34602473290",wa2:"+34602473290",notice:"Bienvenido a Nex Estore Shop. ¡Recargas rápidas y seguras!"},games:[{n:"Free Fire",e:"🔥",o:[[110,265],[341,795],[572,1325],[1166,2650],[2398,5300],[6160,13250]]}]};
 var S;try{S=JSON.parse(localStorage.getItem("nex"))}catch(e){}
 if(!S)S=JSON.parse(JSON.stringify(DEF));
@@ -64,7 +65,7 @@ var sess=null;try{sess=localStorage.getItem("nexs")}catch(e){}
 var tab="home",F={},watch=null,at="cl",auth="in",th=null,OT="ord",OF="all";
 var PAL=["linear-gradient(135deg,#f97316,#7c2d12)","linear-gradient(135deg,#ef4444,#450a0a)","linear-gradient(135deg,#8b5cf6,#2e1065)","linear-gradient(135deg,#0ea5e9,#082f49)"];
 function me(){return S.users.find(function(u){return u.id==sess})}
-function isA(){var u=me();return u&&u.email==ADMIN}
+function isA(){var u=me();return u&&isAdm(u.email)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function $(i){return document.getElementById(i)}
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
@@ -80,7 +81,7 @@ function modal(h){$("md").innerHTML=h?'<div class="modal" onclick="if(event.targ
 function authV(){return'<main style="padding-top:30px"><div class="c hero"><h2 style="font-size:24px">亗 Nex Estore Shop</h2><div>Recargas de diamantes</div></div><div class="c"><div class="chips"><button class="chip'+(auth=="in"?" on":"")+'" onclick="auth=\'in\';render()">Iniciar sesión</button><button class="chip'+(auth=="up"?" on":"")+'" onclick="auth=\'up\';render()">Crear cuenta</button></div>'+(auth=="up"?'<input id="an" placeholder="Nombre"><input id="ap" type="tel" placeholder="Número (opcional)">':'')+'<input id="ae" type="email" placeholder="Correo"><input id="aw" type="password" placeholder="Contraseña"><button class="b" onclick="doAuth()">'+(auth=="in"?"Entrar":"Crear cuenta")+'</button></div></main>'}
 function doAuth(){var e=$("ae").value.trim().toLowerCase(),w=$("aw").value,u;if(!e||!w)return toast("Completa correo y contraseña");
 if(auth=="up"){var n=$("an").value.trim();if(!n)return toast("Pon tu nombre");if(S.users.some(function(x){return x.email==e}))return toast("Ese correo ya existe");
-u={id:uid(),name:n,phone:$("ap").value.trim(),email:e,pw:w,bal:0,ban:false,adm:e==ADMIN,t:Date.now()};S.users.push(u);sv();sess=u.id}
+u={id:uid(),name:n,phone:$("ap").value.trim(),email:e,pw:w,bal:0,ban:false,adm:isAdm(e),t:Date.now()};S.users.push(u);sv();sess=u.id}
 else{u=S.users.find(function(x){return x.email==e&&x.pw==w});if(!u)return toast("Datos incorrectos");if(u.ban)return toast("Cuenta baneada");sess=u.id}
 try{localStorage.setItem("nexs",sess)}catch(x){}render()}
 function logout(){sess=null;try{localStorage.removeItem("nexs")}catch(e){}render()}
@@ -157,7 +158,7 @@ return'<div class="sec">Mi perfil</div><div class="c idc"><div style="display:fl
 
 /* ADMIN */
 function adminV(){if(!isA())return"";var T=[["cl","Clientes"],["of","Ofertas"],["pe","Pedidos"],["aj","Ajustes"]],h='<div class="tabs">'+T.map(function(t){return'<button class="s '+(at==t[0]?"on":"")+'" onclick="at=\''+t[0]+'\';render()">'+t[1]+'</button>'}).join("")+'</div>',C=S.cfg;
-if(at=="cl")h+='<div class="c">'+S.users.map(function(u){return'<div class="row"><div><b>'+esc(u.name)+'</b> '+(u.ban?tg("no"):"")+(u.adm?tg("ok"):"")+'<div class="mu">'+esc(u.email)+' · '+u.bal+' NES</div></div>'+(u.email==ADMIN?"":'<div><button class="s" onclick="tu(\''+u.id+'\',\'ban\')">'+(u.ban?"Desbanear":"Banear")+'</button> <button class="s" onclick="tu(\''+u.id+'\',\'adm\')">'+(u.adm?"Quitar admin":"Admin")+'</button></div>')+'</div>'}).join("")+'</div>';
+if(at=="cl")h+='<div class="c">'+S.users.map(function(u){return'<div class="row"><div><b>'+esc(u.name)+'</b> '+(u.ban?tg("no"):"")+(u.adm?tg("ok"):"")+'<div class="mu">'+esc(u.email)+' · '+u.bal+' NES</div></div>'+(isAdm(u.email)?"":'<div><button class="s" onclick="tu(\''+u.id+'\',\'ban\')">'+(u.ban?"Desbanear":"Banear")+'</button> <button class="s" onclick="tu(\''+u.id+'\',\'adm\')">'+(u.adm?"Quitar admin":"Admin")+'</button></div>')+'</div>'}).join("")+'</div>';
 if(at=="of")h+=S.games.map(function(g,i){return'<div class="c"><div class="row"><b>'+g.e+' <input style="width:60%" value="'+esc(g.n)+'" onchange="S.games['+i+'].n=this.value;sv()"></b><button class="s" onclick="if(confirm(\'¿Borrar juego?\')){S.games.splice('+i+',1);sv();render()}">🗑️</button></div>'+g.o.map(function(o,j){return'<div style="display:flex;gap:4px"><input type="number" value="'+o[0]+'" onchange="S.games['+i+'].o['+j+'][0]=+this.value;sv()"><input type="number" value="'+o[1]+'" onchange="S.games['+i+'].o['+j+'][1]=+this.value;sv()"><button class="s" onclick="S.games['+i+'].o.splice('+j+',1);sv();render()">✕</button></div>'}).join("")+'<button class="s" onclick="S.games['+i+'].o.push([0,0]);sv();render()">+ Oferta (💎 / precio)</button></div>'}).join("")+'<button class="b" onclick="var n=prompt(\'Nombre del juego\');if(n){S.games.push({n:n,e:\'🎮\',o:[]});sv();render()}">+ Añadir juego</button>';
 if(at=="pe")h+='<div class="c">'+(S.orders.slice().reverse().map(function(o){return'<div class="row"><div><b>'+(o.kind=="dep"?"Depósito "+o.cr+" NES":"💎 "+o.d+" "+esc(o.game))+'</b> '+tg(o.status)+'<div class="mu">'+esc(o.name)+' · '+o.method+(o.pid?' · ID '+esc(o.pid):"")+'<br>'+esc(o.ev)+'</div></div>'+(o.status=="pend"?'<div><button class="s" onclick="dec(\''+o.id+'\',\'ok\')">✅</button> <button class="s" onclick="dec(\''+o.id+'\',\'no\')">❌</button></div>':"")+'</div>'}).join("")||'<p class="mu">Sin pedidos.</p>')+'</div>';
 if(at=="aj"){var f=function(k,l){return'<label class="mu">'+l+'</label><input value="'+esc(C[k])+'" onchange="S.cfg.'+k+'=this.value;sv()">'};
